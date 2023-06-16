@@ -1,0 +1,15 @@
+{
+  "plugins": [
+    [
+      "babel-plugin-module-resolver",
+      {
+        "alias": {
+          "src": "./src",
+          "@restaurant-tools": "./src/restaurant/tools",
+          "@restaurant-ui": "./src/@restaurant/components",
+          "@restaurant-constants/*": "./src/@restaurant/constants"
+        }
+      }
+    ]
+  ]
+}
