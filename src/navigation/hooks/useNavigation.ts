@@ -38,7 +38,7 @@ export const useNavigation = <T extends {}>() => {
   };
 
   const openDrawer = () => {
-    navigation.dispatch(state => {
+    navigation.dispatch(_ => {
       return DrawerActions.openDrawer();
     });
   };

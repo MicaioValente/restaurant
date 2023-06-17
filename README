@@ -1,0 +1,16 @@
+# temper-mobile-app
+
+Restaurant, is a simple application for a React Native challenge
+
+## Run on the local machine
+
+```shell
+yarn install # for install all dependences
+npx pod-install  # for install pods on ios
+
+# ios
+yarn ios # for development
+
+# android
+yarn android # for development
+```

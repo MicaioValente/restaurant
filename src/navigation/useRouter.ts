@@ -1,4 +1,3 @@
-import { useContext, useEffect, useState } from 'react';
 import { useNavigation } from './hooks/useNavigation';
 import { Navigators } from './navigators';
 import { screens } from './screens';

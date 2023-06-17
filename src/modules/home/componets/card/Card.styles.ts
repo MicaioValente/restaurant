@@ -2,12 +2,10 @@ import { StyleSheet } from 'react-native';
 import { colors } from '@restaurant-ui/constants';
 
 export const styles = StyleSheet.create({
-  container: {
-    paddingHorizontal: 10,
-    paddingVertical: 15,
-    borderRadius: 10,
+  shadow: {
     backgroundColor: colors.white,
     marginBottom: 20,
+    borderRadius: 10,
     shadowColor: colors.black,
     shadowOffset: {
       width: 0,
@@ -17,6 +15,13 @@ export const styles = StyleSheet.create({
     shadowRadius: 4.65,
 
     elevation: 8,
+  },
+  container: {
+    paddingHorizontal: 10,
+    paddingVertical: 15,
+    borderRadius: 10,
+    width: 150,
+    height: 150,
   },
   image: {
     width: 130,
@@ -45,6 +50,7 @@ export const styles = StyleSheet.create({
     fontSize: 12,
     color: colors.black,
     fontWeight: '500',
+    backgroundColor: 'transparent',
   },
   colorWhite: {
     color: colors.white,

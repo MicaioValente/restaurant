@@ -5,8 +5,9 @@ import UserRegister from 'src/@restaurant/assets/userRegister.png';
 import { Image, View } from 'react-native';
 import { styles } from './UserRegistration.styles';
 import { FormikProvider } from 'formik';
+
 const UserRegistrationScreen = () => {
-  const { formik, isLoading } = useUserRegistration();
+  const { phoneNumberMask, formik, isLoading } = useUserRegistration();
 
   return (
     <Screen withSafeArea withKeyboard withScroll>
@@ -38,8 +39,8 @@ const UserRegistrationScreen = () => {
           <View style={styles.formControl}>
             <TextInput
               title={'Telefone'}
-              placeholder={'Telefone'}
-              value={formik.values.phone_number}
+              placeholder={'( )      -    '}
+              value={phoneNumberMask(formik.values.phone_number)}
               onChangeText={formik.handleChange('phone_number')}
               onBlur={formik.handleBlur('phone_number')}
               isError={
@@ -75,7 +76,6 @@ const UserRegistrationScreen = () => {
               errorMessage={formik.errors.passwordConfirmation}
             />
           </View>
-
           <View style={styles.containerButton}>
             <Button
               label={'Criar Conta'}

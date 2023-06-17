@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native';
-import { colors } from 'src/@restaurant/components/constants';
 
 export const styles = StyleSheet.create({
   containerImage: {},

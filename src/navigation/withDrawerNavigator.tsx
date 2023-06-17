@@ -8,7 +8,6 @@ import IconHeader from 'src/@restaurant/assets/iconHeader.png';
 import IconHeaderMenu from 'src/@restaurant/assets/iconHeaderMenu.svg';
 import IconHeaderConfig from 'src/@restaurant/assets/iconHeaderConfig.svg';
 import { colors } from 'src/@restaurant/components/constants';
-import { useRouter } from './useRouter';
 
 const { Navigator, Screen, Group } = createDrawerNavigator();
 
@@ -16,8 +15,9 @@ const withDrawerNavigator = (
   initialRouteName: Navigators,
   screens: ScreenType[],
   screenOptions = {},
+  onOpenConfig: () => void,
+  onOpenDrawer: () => void,
 ) => {
-  const { onOpenConfig, onOpenDrawer } = useRouter();
   const options = {
     headerTitle: () => {
       return (

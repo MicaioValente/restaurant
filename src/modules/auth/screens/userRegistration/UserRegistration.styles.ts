@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native';
-import { colors } from '@restaurant-ui/constants';
 
 export const styles = StyleSheet.create({
   container: {
@@ -7,12 +6,13 @@ export const styles = StyleSheet.create({
   },
   image: {
     alignSelf: 'center',
-    marginHorizontal: 20,
+    marginHorizontal: 50,
   },
   formControl: {
     marginBottom: 18,
   },
   containerButton: {
     marginTop: 'auto',
+    marginBottom: 50,
   },
 });
