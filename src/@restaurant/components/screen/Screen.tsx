@@ -18,10 +18,12 @@ const Screen = ({
   withKeyboard,
   withSafeArea,
   noPadding,
+  backgroundColor,
 }: ScreenTypes) => {
   if (withKeyboard && withSafeArea && withScroll) {
     return (
-      <SafeAreaView style={styles.safeArea}>
+      <SafeAreaView
+        style={[styles.safeArea, { backgroundColor: backgroundColor }]}>
         <KeyboardAvoidingView
           style={styles.keyboard}
           behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
@@ -69,7 +71,8 @@ const Screen = ({
 
   if (withKeyboard && withSafeArea && noPadding) {
     return (
-      <SafeAreaView style={styles.safeArea}>
+      <SafeAreaView
+        style={[styles.safeArea, { backgroundColor: backgroundColor }]}>
         <KeyboardAvoidingView
           style={styles.keyboard}
           behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
@@ -88,7 +91,8 @@ const Screen = ({
 
   if (withKeyboard && withSafeArea) {
     return (
-      <SafeAreaView style={styles.safeArea}>
+      <SafeAreaView
+        style={[styles.safeArea, { backgroundColor: backgroundColor }]}>
         <KeyboardAvoidingView
           style={styles.keyboard}
           behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
@@ -109,7 +113,8 @@ const Screen = ({
 
   if (withSafeArea) {
     return (
-      <SafeAreaView style={styles.safeArea}>
+      <SafeAreaView
+        style={[styles.safeArea, { backgroundColor: backgroundColor }]}>
         <View
           style={[
             styles.container,
@@ -158,7 +163,8 @@ const Screen = ({
 
   if (withSafeArea) {
     return (
-      <SafeAreaView style={styles.safeArea}>
+      <SafeAreaView
+        style={[styles.safeArea, { backgroundColor: backgroundColor }]}>
         <View
           style={[
             styles.container,

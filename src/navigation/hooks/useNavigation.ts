@@ -1,5 +1,6 @@
 import {
   CommonActions,
+  DrawerActions,
   NavigationProp,
   useNavigation as RNUseNavigation,
 } from '@react-navigation/native';
@@ -36,9 +37,16 @@ export const useNavigation = <T extends {}>() => {
     );
   };
 
+  const openDrawer = () => {
+    navigation.dispatch(state => {
+      return DrawerActions.openDrawer();
+    });
+  };
+
   return {
     navigate,
     reset,
+    openDrawer,
     goBack: navigation.goBack,
     addListener: navigation.addListener,
   };

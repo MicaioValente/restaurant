@@ -1,25 +1,18 @@
 import { useContext, useEffect, useState } from 'react';
-import { AsyncStorageKeys } from 'src/common/constants/asyncStorageKeys';
-import { getAsyncStorageItem } from 'src/common/utils/asyncStorage';
-import { context } from 'src/context';
+import { useNavigation } from './hooks/useNavigation';
+import { Navigators } from './navigators';
+import { screens } from './screens';
 
 export const useRouter = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const {
-    state: { user },
-  } = useContext(context);
-  useEffect(() => {
-    (async () => {
-      const userStorage = await getAsyncStorageItem(
-        AsyncStorageKeys.USER_DATA_LOGIN_GETBYID,
-      );
-      if (userStorage) {
-        setIsAuthenticated(true);
-        return;
-      }
-      setIsAuthenticated(user.uuid !== '');
-    })();
-  }, [user]);
+  const navigation = useNavigation();
 
-  return { isAuthenticated };
+  const onOpenConfig = () => {
+    navigation.navigate(Navigators.Home, screens.Config);
+  };
+
+  const onOpenDrawer = () => {
+    navigation.openDrawer();
+  };
+
+  return { onOpenConfig, onOpenDrawer };
 };

@@ -2,10 +2,10 @@ import { ScreenType } from 'src/@restaurant/tools';
 import { HomeRoutes } from 'src/modules/home/navigation/routes';
 import { Navigators } from 'src/navigation/navigators';
 import { colors } from 'src/@restaurant/components/constants';
-import withBaseNavigator from 'src/navigation/withBaseNavigator';
 import { HomeScreen } from 'src/modules/home/screens/home';
+import withDrawerNavigator from 'src/navigation/withDrawerNavigator';
 
-export const authScreens: ScreenType[] = [
+export const homeScreens: ScreenType[] = [
   {
     name: HomeRoutes.Home,
     component: HomeScreen,
@@ -14,9 +14,9 @@ export const authScreens: ScreenType[] = [
 ];
 
 const HomeNavigator = () =>
-  withBaseNavigator(Navigators.Auth, authScreens, {
+  withDrawerNavigator(Navigators.Home, homeScreens, {
     contentStyle: {
-      backgroundColor: colors.white,
+      backgroundColor: colors.yellow,
     },
   });
 

@@ -12,4 +12,5 @@ export type ScreenTypes = {
   withKeyboard?: boolean;
   withSafeArea?: boolean;
   noPadding?: boolean;
+  backgroundColor?: string;
 };
