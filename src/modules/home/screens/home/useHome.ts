@@ -1,3 +1,17 @@
+import { Restaurants, Business } from './Home.constants';
+
 export const useHome = () => {
-  return {};
+  const onActivateGPS = () => {};
+  const onDidTapCard = (id: string) => {
+    console.log(id);
+  };
+  const onDidTapCardBusiness = () => {};
+
+  return {
+    onActivateGPS,
+    onDidTapCard,
+    onDidTapCardBusiness,
+    Restaurants,
+    Business,
+  };
 };
